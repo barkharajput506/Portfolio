@@ -1,0 +1,38 @@
+{% extends "Base/base.html" %}
+{% load static %}
+{% block content1 %}
+<div class="row my-5">
+    <div class="col-12 d-flex justify-content-center align-items-center ">
+    <div class="circular-image-container">
+        <img class="circular-image" src="{% static 'Base/images/m3.jpg'%}" alt="Image">
+    </div>
+
+    </div>
+
+    <div class="col-12 text-center mt-3">
+        <h4 class="title">Hi, my name is </h4>
+        <div class="name">
+        <h1>Km Barkha</h1>
+        <h1>I am Software Engineer</h1>
+        </div>
+
+    </div>
+
+    <div class="col-12 text-center mt-3">
+        <div class="col-12 d-flex justify-content-center align-items-center ">
+        <a href="https://www.linkedin.com/in/km-barkha-a9a684370?" target="_blank" class="ms-3">
+            <img src="{% static 'Base/images/linkedin1.jpg' %}" alt="linkedin" width="50" height="50" class="social_links">
+        </a>
+
+        <a href="https://github.com/kmbarkha" target="_blank" class="ms-3">
+            <img src="{% static 'Base/images/github1.png' %}" alt="github" width="50" height="50" class="social_links">
+        </a> 
+
+        {% comment %} <a href="t.me/mviasupsc" target="_blank" class="ms-3">
+            <img src="{% static 'Base/images/telegram2.jpg' %}" alt="telegram" width="50" height="50" class="social_links">
+        </a> {% endcomment %}
+        </div>
+
+    </div>
+</div>
+{% endblock content1 %}

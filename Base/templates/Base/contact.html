@@ -1,0 +1,48 @@
+{% extends "Base/base.html" %}
+{% load static %}
+{% block content1 %}
+
+<div class="row my-2">
+    <div class="col-4 text-center my-5 text-light">
+        <h1 class="mt-4">Stay Connected</h1>
+        <h3 class="mt-4">rbarkha5066@gmail.com</h3>
+
+        
+        <div class="col-12 d-flex justify-content-center align-items-center mt-4">
+        <a href="https://www.linkedin.com/in/km-barkha-a9a684370?" target="_blank" class="ms-3">
+            <img src="{% static 'Base/images/linkedin1.jpg' %}" alt="linkedin" width="50" height="50" class="social_links">
+        </a>
+
+        <a href="https://github.com/kmbarkha" target="_blank" class="ms-3">
+            <img src="{% static 'Base/images/github1.png' %}" alt="youtube" width="50" height="50" class="social_links">
+        </a>
+        </div>
+    
+    </div>
+
+    
+    <div class="col-5 offset-1 mt-3">
+        <div class="container form-container">     
+
+        <form action="", method="POST" novalidate>
+          {% csrf_token %}
+          {{form.as_p}}           
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        </div>    
+    </div>
+</div>
+
+{% if messages %}
+  {% for message in messages  %}
+    <div class="alert alert-{{ message.tag }} 
+    alert-dismissible fade show">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+  {% endfor %}
+{% endif %}
+
+{% endblock content1 %}

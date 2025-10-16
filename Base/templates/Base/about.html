@@ -1,0 +1,36 @@
+{% extends "Base/base.html" %}
+{% load static %}
+{% block content1 %}
+<div class="row my-5">
+    <div class="col-4 d-flex justify-content-center align-items-center ">
+        <img src="{% static 'Base/images/m3.jpg' %}" alt="image" class="about-image">
+    </div>
+
+    <div class="col-7 text-left text-light">
+        <h2>Hello !</h2>
+        <p class="fs-5">
+            I'm Barkha, a Computer Science Engineering graduate with a passion for building robut web applications.
+            I see complex problems as opportunities to learn and build. My core technical stack- HTML, CSS, C, Python, Django, SQL
+            
+        </p>
+        <p class="fs-5">
+            As a dedicated fresher, I translate academic knowledge into practical, full stack solutions i dont't just study code I build with it
+            My portfolio showcases multiple projects demonstrating end-to-end development ability.
+            
+        </p>
+
+    </div>
+</div>
+
+<div class="row my-2">
+    <h2 class="text-center" style="color:#4fffb0">My Tech Stack</h2>
+    <div class="d-flex justify-content-around align-items-center ">
+    <img src="{% static 'Base/images/html.png' %}" alt="html Logo" width="70" height="70" class="img-fluid">
+    <img src="{% static 'Base/images/css.png' %}" alt="css Logo" width="70" height="70" class="img-fluid"> 
+    <img src="{% static 'Base/images/c.png' %}" alt="c Logo" width="70" height="70" class="img-fluid">
+    <img src="{% static 'Base/images/python.png' %}" alt="Python Logo" width="70" height="70" class="img-fluid">
+    <img src="{% static 'Base/images/sql.png' %}" alt="sql Logo" width="70" height="70" class="img-fluid">
+    <img src="{% static 'Base/images/django1.jpg' %}" alt="django Logo" width="70" height="70" class="img-fluid">
+    </div>
+</div>
+{% endblock content1 %}
