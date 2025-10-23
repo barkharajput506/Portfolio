@@ -7,6 +7,7 @@ from Base import models
 from Base.forms import ContactForm
 import os
 from django.conf import settings
+from django.urls import reverse
 
 
 def home(request):
@@ -90,22 +91,25 @@ def contact(request):
 
 
 def resume(request):
-    RESUME_RELATIVE_PATH = 'Base/doc/resume.pdf'
-    file_path = os.path.join(settings.STATIC_ROOT, RESUME_RELATIVE_PATH)
-    if not os.path.exists(file_path):
-        print(f"ERROR: Resume file not found at expected path: {file_path}")
-        return HttpResponse("Resume file not found.", status=404)
+    # RESUME_RELATIVE_PATH = 'Base/doc/resume.pdf'
+    # file_path = os.path.join(settings.STATIC_ROOT, RESUME_RELATIVE_PATH)
+    # if not os.path.exists(file_path):
+    #     print(f"ERROR: Resume file not found at expected path: {file_path}")
+    #     return HttpResponse("Resume file not found.", status=404)
     
-    try:
-        file_handle = open(file_path, 'rb')
-        response = FileResponse(file_handle, content_type='application/pdf')
-        response['Content-Disposition'] = 'attachment; filename="resume.pdf"'
-        return response
-    except FileNotFoundError:
-        return HttpResponse("Resume file not found.", status=404)
-    except Exception as e:
-        print(f"ERROR serving resume: {e}")
-        return HttpResponse("An internal error occurred.", status=500)
+    # try:
+    #     file_handle = open(file_path, 'rb')
+    #     response = FileResponse(file_handle, content_type='application/pdf')
+    #     response['Content-Disposition'] = 'attachment; filename="resume.pdf"'
+    #     return response
+    # except FileNotFoundError:
+    #     return HttpResponse("Resume file not found.", status=404)
+    # except Exception as e:
+    #     print(f"ERROR serving resume: {e}")
+    #     return HttpResponse("An internal error occurred.", status=500)
+
+    static_url = os.path.join(settings.STATIC_URL, 'Base/doc/resume.pdf')
+    return redirect(static_url)
 
     # resume_path = 'Base/doc/resume.pdf'
     # resume_path = staticfiles_storage.path(resume_path)
