@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -80,10 +81,10 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "newdb",
-        "USER": "barkha",
-        "PASSWORD": "Hello123456",
-        "HOST": "127.0.0.1",
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "Yuglodhi662@",
+        "HOST": "db.mrkbzvxspdzqejiakrec.supabase.co",
         "PORT": "5432",
     }
 }
