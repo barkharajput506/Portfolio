@@ -1,38 +1,317 @@
 {% extends "Base/base.html" %}
 {% load static %}
 {% block content1 %}
-<div class="row my-5">
-    <div class="col-12 d-flex justify-content-center align-items-center ">
-    <div class="circular-image-container">
-        <img class="circular-image" src="{% static 'Base/images/m3.jpg'%}" alt="Image">
+
+<div id="__next">
+<div class="__variable">
+  <div class="pointer" ></div>
+  <div class="max-auto">
+    <div class="justify">
+      <header class="content-header">
+    <div>
+      <h1 class="section-title">
+        <a href="/">Km Barkha</a>
+      </h1>
+      <h2 class="section-head">Software Engineer</h2>
+      <p class="section-description">I build robust, scalable web applications.</p>
+      <nav class="nav-bar">
+        <ul class="nav-ul">
+            <li><a href="#{% url 'about' %}" class="nav-a">
+            <span class="nav-indicator">
+            </span>
+            <span class="nav-text">About</span>
+          </a></li>
+            <li><a href="#{% url 'projects' %}" class="nav-a">
+              <span class="nav-indicator">
+            </span>
+            <span class="nav-text">Projects</span>
+            </a></li>
+            <li><a href="#{% url 'certificate' %}" class="nav-a">
+              <span class="nav-indicator">
+            </span>
+            <span class="nav-text">Certificate</span>
+            </a></li>
+            <li><a href="{% url 'contact' %}" class="nav-a">
+              <span class="nav-indicator">
+            </span>
+            <span class="nav-text">Contact</span>
+            </a></li>
+            <li><a href="{% url 'resume' %}" class="nav-a">
+              <span class="nav-indicator">
+            </span>
+            <span class="nav-text">Resume</span>
+            </a></li>
+        </ul>
+      </nav>
     </div>
 
+    <ul class="social-media">
+      <li class="links"><a href="https://github.com/kmbarkha" class="links_anc">
+        <span class="sr-only">GitHub</span>
+        <img src="{% static 'Base/images/github.svg' %}" alt="github" class="social_links">
+      </a></li>
+      <li class="links"><a href="https://www.linkedin.com/in/km-barkha-a9a684370?" class="links_anc">
+        <span class="sr-only">linkedin</span>
+        <img src="{% static 'Base/images/linkedin.svg' %}" alt="linkedin" class="social_links">
+      </a></li>
+      <li class="links"><a href="https://instagram.com" class="links_anc">
+        <span class="sr-only">instagram</span>
+        <img src="{% static 'Base/images/insta1.svg' %}" alt="instagram" class="social_links">
+      </a></li>
+    </ul>
+  </header>  
+
+      <main  id="content1" class="content">
+        <section id="{% url 'about' %}" class="mb-16">
+          <div class="sticky">
+            <h2 class="text">About</h2>
+          </div>
+          <div>
+            <p class="para">As a dedicated and motivated software engineer, I am driven by the challenge of findig elegant solutions to complex technical 
+              puzzles. My foundation is build on Python and C language and developing with frameworks e.g., Django.
+            </p>
+            <p class="para">Software Engineer skilled in web development  ready to contribute to projects focused on 
+              robust and scalable applications. My core technical skills are in the Python ecosystem, utilizing Django for efficient back-end system development.
+            </p>
+            <p class="para">I design and develop clean, responsive user interfaces using HTML and CSS. 
+              I work with relational databases, including PostgreSQL, 
+              MySQL, and SQLite3 ensuring data integrity and optimized query performance.
+            </p>
+            <p class="para">I am passionate about turning complex problems into elegant, maintainable code and 
+              I am always eager to learn new technologies to deliver high-quality solutions.
+            </p>
+            <p>In my spare time, I’m usually rope skipping, reading, hanging out with my family.</p>
+          </div>
+        </section>
+
+        <section id="{% url 'projects' %}" class="mb-16">
+          <div class="sticky">
+            <h2 class="text">Projects</h2>
+          </div>
+          <div>
+            <ul class="group/list">
+
+              <li class="mb-12">
+                <div class="group">
+                  <div class="absolute"></div>
+                  <div class="z-10">
+                <h3>
+                <a href="https://github.com/kmbarkharajput/Ecommerce_Website.git" class="inline-flex">
+                <span class="absolute1"></span>
+                <span>E-commerce Website</span>
+                </a>
+                </h3>
+                <p class="mt-2">Full- featured platform built with python's framework django to manage products, process 
+                transactions, and handle user accounts effectively.
+              </p>
+              <ul class="flex-wrap">
+                  <li class="mr-1">
+                  <div class="round-flex">Python</div>
+                  </li>
+                  <li class="mr-1">
+                  <div class="round-flex">Bootstrap</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">Django</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">HTML</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">CSS</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">JavaScript</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">SQLlite</div>
+                  </li>
+                </ul>
+                  </div>
+                <img src="static/Base/images/ecomerceweb.png" alt="ecomerceweb" class="image" style="color:transparent">
+              </div>
+            </li>
+
+              <li class="mb-12">
+                <div class="group">
+                  <div class="absolute"></div>
+                  <div class="z-10">
+                <h3>
+                <a href="https://github.com/kmbarkharajput/Portfolio.git" class="inline-flex">
+                <span class="absolute1"></span>
+                <span>Portfolio Website</span>
+                </a>
+                </h3>
+                <p class="mt-2">A Django-built portfolio website is secure, scalable and dynamic platform for showcasing
+                  my work and skils using a robust python web framework.
+                </p>
+                <ul class="flex-wrap">
+                  <li class="mr-1">
+                  <div class="round-flex">Python</div>
+                  </li>
+                  <li class="mr-1">
+                  <div class="round-flex">Bootstrap</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">Django</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">HTML</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">CSS</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">PostgreSQL</div>
+                  </li>
+                </ul>
+                  </div>
+                <img src="static/Base/images/portfolioimg.png" alt="portfolio" class="image">
+              </div>
+            </li>
+
+            <li class="mb-12">
+                <div class="group">
+                  <div class="absolute"></div>
+                  <div class="z-10">
+                <h3>
+                <a href="https://github.com/kmbarkharajput/Resume_Uploader.git" class="inline-flex">
+                <span class="absolute1"></span>
+                <span>Resume Uploder</span>
+                </a>
+                </h3>
+                <p class="mt-2">Developed a secure file upload mechanism using Django's FileField and ensured proper file storage and retrieval.
+​                        Implemented CRUD functionality to allow users to submit new resumes and view a consolidated list of candidates stored 
+                         in SQLite database.
+              </p>
+              <ul class="flex-wrap">
+                  <li class="mr-1">
+                  <div class="round-flex">Python</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">Django</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">SQLlite</div>
+                  </li>
+                </ul>
+                  </div>
+                <img src="static/Base/images/resumeuploader.png" alt="resumeuploder" class="image">
+              </div>
+            </li>
+
+            <li class="mb-12">
+                <div class="group">
+                  <div class="absolute"></div>
+                  <div class="z-10">
+                <h3>
+                <a href="https://github.com/kmbarkharajput/Library_Management_System.git" class="inline-flex">
+                <span class="absolute1"></span>
+                <span>Library Management System</span>
+                </a>
+                </h3>
+                <p class="mt-2">A Python-based Library Management System is an application that digitally manages a 
+                library's inventory, memebers, and book transactions using a database for efficient operations.</p>
+                <ul class="flex-wrap">
+                  <li class="mr-1">
+                  <div class="round-flex">Python</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">Tkinter</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">SQLlite</div>
+                  </li>
+                </ul>
+                </div>
+                <img src="static/Base/images/libimg.png" alt="library" class="image">
+              </div>
+            </li>
+
+            <li class="mb-12">
+                <div class="group">
+                  <div class="absolute"></div>
+                  <div class="z-10">
+                <h3>
+                <a href="https://github.com/kmbarkharajput/Resume_Uploader.git" class="inline-flex">
+                <span class="absolute1"></span>
+                <span>Image Uploder</span>
+                </a>
+                </h3>
+                <p class="mt-2">A foundational web application built with Django demonstrating secure and efficient file management. 
+                  The system allows users to upload, store, and display images.
+              </p>
+              <ul class="flex-wrap">
+                  <li class="mr-1">
+                  <div class="round-flex">Python</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">Django</div>
+                  </li>
+                  <li class="mr-1">
+                    <div class="round-flex">SQLlite</div>
+                  </li>
+                </ul>
+                  </div>
+                <img src="static/Base/images/imageuploader.png" alt="resumeuploder" class="image">
+              </div>
+            </li>
+
+
+            </ul>
+          </div>
+        </section>
+
+        <section id="{% url 'certificate' %}" class="mb-16">
+          <div class="sticky">
+            <h2 class="text">Certificate</h2>
+          </div>
+
+          <div>
+            <ol class="group/list">
+              <li class="mb-12">
+                <div class="group">
+                  <div class="absolute"></div>
+                  <header class="certificate-h">27/08/20 - 27/09/20</header>
+                <div class="z-11"> 
+                  <h3 class="font-medium">
+                <div>
+                <a href="static/Base/doc/python.pdf" class="inline-flex">
+                  <span class="absolute1"></span>
+                  <span>Python Development Traning Program</span>
+                </a>
+                </div>    
+                {% comment %} <img src="static/Base/images/pythoncer.png" alt="python"> {% endcomment %}
+                <p class="mt-2">Intensive certification covering Python fundamentals, object-oriented programming and 
+                  practical application of the Django web framework.
+                </p>
+              
+              </div> 
+              </div>
+            </li>
+            </ol>  
+          </div>
+        </section>
+
+      <footer class="max-f">
+        <p> designed in
+          <a href="https://www.djangoproject.com/" class="foot">Django</a>
+          and coded in
+          <a href="https://code.visualstudio.com/" class="foot-f">Visual Studio Code</a>
+          by your truly. Built with
+          <a href="https://www.python.org/" class="foot">Python</a>
+          and
+          <a href="https://getbootstrap.com/" class="foot">BootStrap</a>
+          , deployed with
+          <a href="https://vercel.com/" class="foot">Vercel</a>
+        </p>
+      </footer>
+      </main>
     </div>
-
-    <div class="col-12 text-center mt-3">
-        <h4 class="title">Hi, my name is </h4>
-        <div class="name">
-        <h1>Km Barkha</h1>
-        <h1>I am Software Engineer</h1>
-        </div>
-
-    </div>
-
-    <div class="col-12 text-center mt-3">
-        <div class="col-12 d-flex justify-content-center align-items-center ">
-        <a href="https://www.linkedin.com/in/km-barkha-a9a684370?" target="_blank" class="ms-3">
-            <img src="{% static 'Base/images/linkedin1.jpg' %}" alt="linkedin" width="50" height="50" class="social_links">
-        </a>
-
-        <a href="https://github.com/kmbarkharajput" target="_blank" class="ms-3">
-            <img src="{% static 'Base/images/github1.png' %}" alt="github" width="50" height="50" class="social_links">
-        </a> 
-
-        {% comment %} <a href="t.me/mviasupsc" target="_blank" class="ms-3">
-            <img src="{% static 'Base/images/telegram2.jpg' %}" alt="telegram" width="50" height="50" class="social_links">
-        </a> {% endcomment %}
-        </div>
-
-    </div>
+  </div>
 </div>
+</div>
+
+
+
 {% endblock content1 %}
