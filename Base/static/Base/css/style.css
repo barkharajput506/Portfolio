@@ -957,7 +957,8 @@ h3{
         width: 50vh;
         justify-content: center;
         box-sizing: border-box;
-        margin-left: 5.5rem;
+        /* margin-left: 2rem; */
+        margin: auto;
         
     }
 }
